@@ -1,0 +1,43 @@
+
+<div class="container">
+    <div class="col-md-7 offset-mt-3">
+
+<div class="card card-body">
+    
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Sr No.</th>
+                <th>Tasks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let task of view;index as i">
+                <td>{{i+1}}</td>
+                <td>{{task.taskname}}</td>
+               
+              <td>  <button class="btn btn-success" (click)=deletedata(i)>Delete</button></td>
+
+                         
+            </tr>
+        </tbody>
+    </table>
+    
+
+</div>
+</div>
+</div>
+<div class="container">
+
+<form #form='ngForm' (ngSubmit)='editdata(form.value)'>
+    <legend>Modify Data</legend>
+    <input type="text" class="form-control" id="" placeholder="RenameTask" name="taskname" #taskname="ngModel" ngModel > 
+
+    <input type="number" class="form-control" id="" placeholder="Enter number" name="tasknumber" #tasknumber="ngModel" ngModel > 
+
+
+<button type="submit" class="btn btn-primary" >Resubmit</button>
+
+    
+</form>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+<form #formdata='ngForm' (ngSubmit)='adddata(formdata.value)'>
+    <legend>Add Task</legend>
+
+    <div class="form-group">
+        
+        <input type="text" class="form-control" id="" placeholder="Enter Task" name="taskname" #taskname="ngModel" ngModel >
+       
+       
+        
+       
+    </div>
+
+    
+
+    <button type="submit" class="btn btn-primary" >Submit</button>
+</form>
+</div>
+
+
+
+
+        
