@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean id="helloWorld" class="com.ust.usttyspringcore.beans.HelloWorld"  >
+		<property name="msg" value="she:-Hey Devil..!"/>
+		<property name="count" value="10">
+		</property>
+		<!-- <property name="animal" ref="human"></property>
+		 --><property name="map">
+			<map>
+				<entry key="Abc" value="123"></entry>
+				<entry key="Xyz" value="987"></entry>
+			</map>
+		</property>
+		</bean>
+		
+<bean id="postProcessor" class="com.ust.beanlifecycle.PostProcessor">
+
+</bean>	
+<bean id="factoryPostProcessor" class="com.ust.beanlifecycle.FactoryPostProcessor"></bean>
+		
+	<bean id="dog" class="com.ust.usttyspringcore.beans.Dog" init-method="init" destroy-method="destroy"/>
+	
+	 <!-- <bean id="human" class="com.ust.usttyspringcore.beans.Human"/>
+	
+	<bean id="pet" class="com.ust.usttyspringcore.beans.Pet" autowire="constructor">
+	
+		<constructor-arg name="name" value="Judo"/>	
+		<constructor-arg name="animal" ref="dog"/> 
+	</bean>
+	 -->
+	
+</beans>
